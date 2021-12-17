@@ -8,5 +8,6 @@ jobs:
     name: run it
     runs-on: ubuntu-latest
     steps:
-      - uses: hsolbrig/actions/wf_test@main
-      - run: echo ${{ job1.outputs.reply }}
+      - id: s1
+        uses: hsolbrig/actions/wf_test@main
+      - run: echo ${{ s1.outputs.reply }}
