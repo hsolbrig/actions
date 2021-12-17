@@ -1,0 +1,12 @@
+name: Test wf_test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    name: run it
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hsolbrig/actions/wf_test@main
+      - run: echo ${{ job1.outputs.reply }}
