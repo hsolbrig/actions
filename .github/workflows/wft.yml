@@ -10,4 +10,4 @@ jobs:
     steps:
       - id: s1
         uses: hsolbrig/actions/wf_test@main
-      - run: echo ${{ s1.outputs.reply }}
+      - run: echo ${{ job1.s1.outputs.reply }}
