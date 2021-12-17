@@ -5,9 +5,9 @@ on:
 
 jobs:
   morph:
-    - uses: hsolbrig/actions/wf_test@main
-      with:
-        message: "Is this real?"
+    uses: hsolbrig/actions/wf_test.yml@main
+    with:
+      message: "Is this real?"
   job1:
     name: run it
     needs: morph
