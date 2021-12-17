@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: s1
-        uses: hsolbrig/actions/wf_test@main
+        uses: hsolbrig/actions/wf_test.yml@main
       - run: echo ${{ needs.morph.outputs.reply }}
