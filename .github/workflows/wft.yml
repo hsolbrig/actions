@@ -5,7 +5,7 @@ on:
 
 jobs:
   morph:
-    uses: hsolbrig/actions/wf_test.yml@main
+    uses: ./github/actions/wf_test.yml@main
     with:
       message: "Is this real?"
   job1:
