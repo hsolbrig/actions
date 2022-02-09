@@ -8,7 +8,7 @@ jobs:
    steps:
      - uses: actions/checkout@v2
      - name: checkit
-       run: ls -l
+       run: ls -la .github
      - uses: ./.github/workflows/actions/wf_test.yml
        with:
            message: "Is this real?"
