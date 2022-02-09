@@ -1,10 +1,10 @@
 name: Reusable workflow
-description: Copied directly from https://docs.github.com/en/actions/learn-github-actions/reusing-workflows
 on:
   workflow_call:
     inputs:
       message:
         description: "Information you are passing in"
+        type: string
         default: "NOT THERE"
         required: true
     outputs:
