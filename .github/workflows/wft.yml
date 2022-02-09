@@ -9,12 +9,12 @@ jobs:
      - name: precheckout
        run: |
          pwd
-         ls -la *
+         ls -la 
      - uses: actions/checkout@v2
      - name: postcheckout
        run: |
          pwd
-         ls -la *
+         ls -la 
      - uses: ./wf_test.yml
        with:
            message: "Is this real?"
