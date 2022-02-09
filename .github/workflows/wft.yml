@@ -7,7 +7,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v2
-     - uses: ./.github/actions/wf_test.yml
+     - name: checkit
+       run: ls -l
+     - uses: ./.github/workflows/actions/wf_test.yml
        with:
            message: "Is this real?"
   job2:
@@ -16,5 +18,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: s1
-        uses: ./.github/actions/wf_test.yml
+        uses: ./.github/workflows/actions/wf_test.yml
       - run: echo ${{ needs.morph.outputs.reply }}
