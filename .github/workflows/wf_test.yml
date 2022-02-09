@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     # Map the job outputs to step outputs
     steps:
-      name: placeholder
-      run: echo "Hello there!"
+      - name: placeholder
+        run: echo "Hello there!"
     outputs:
       reply: Hello, ${{ inputs.message }}
