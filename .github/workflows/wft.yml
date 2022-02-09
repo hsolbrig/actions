@@ -6,8 +6,9 @@ jobs:
   morph:
    runs-on: ubuntu-latest
    steps:
-      - uses: ./actions/wf_test.yml
-        with:
+     - uses: actions/checkout@v2
+     - uses: ./actions/wf_test.yml
+       with:
            message: "Is this real?"
   job2:
     name: run it
