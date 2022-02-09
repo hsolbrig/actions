@@ -15,7 +15,7 @@ jobs:
        run: |
          pwd
          ls -la 
-     - uses: ./wf_test.yml
+     - uses: ./.github/workflows/wf_test.yml
        with:
            message: "Is this real?"
   job2:
@@ -24,5 +24,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: s1
-        uses: ./wf_test.yml
+        uses: ./.github/workflows/wf_test.yml
       - run: echo ${{ needs.morph.outputs.reply }}
