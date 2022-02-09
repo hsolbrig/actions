@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   morph:
-    uses: ./github/actions/wf_test.yml@main
+    uses: ./.github/workflows/actions/wft_test
     with:
       message: "Is this real?"
   job1:
