@@ -5,6 +5,7 @@ on:
     inputs:
       message:
         description: "Information you are passing in"
+        default: "NOT THERE"
         required: true
     outputs:
       reply:
@@ -16,5 +17,8 @@ jobs:
     name: Say hello
     runs-on: ubuntu-latest
     # Map the job outputs to step outputs
+    steps:
+      name: placeholder
+      run: echo "Hello there!"
     outputs:
       reply: Hello, ${{ inputs.message }}
