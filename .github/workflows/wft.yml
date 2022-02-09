@@ -12,9 +12,9 @@ jobs:
         pwd
         ls -la .github/workflows
         ls -la .github/workflows/actions
-        cat /home/runner/work/actions/actions/actions/wf_test.yaml
+        cat /home/runner/work/actions/actions/actions/wf_test.yml
             
-     - uses: ./actions/wf_test.yml
+     - uses: ./actions/actions/wf_test.yml
        with:
            message: "Is this real?"
   job2:
