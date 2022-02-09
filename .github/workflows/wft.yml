@@ -6,14 +6,10 @@ jobs:
   morph:
    runs-on: ubuntu-latest
    steps:
-     - uses: actions/checkout@v2
-     - name: checkit
+     - name: precheckout
        run: |
-        pwd
-        ls -la .github/workflows
-        ls -la .github/workflows/actions
-        cat .github/workflows/actions/wf_test.yml
-            
+         pwd
+         ls -la
      - uses: ./wf_test
        with:
            message: "Is this real?"
