@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   morph:
-    uses: ./.github/workflows/actions/wft_test
+    uses: ./actions/wft_test.yml
     with:
       message: "Is this real?"
   job1:
@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: s1
-        uses: hsolbrig/actions/wf_test.yml@main
+        uses: ./actions/wf_test.yml
       - run: echo ${{ needs.morph.outputs.reply }}
