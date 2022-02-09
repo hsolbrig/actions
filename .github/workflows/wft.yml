@@ -4,10 +4,12 @@ on: workflow_dispatch
 
 jobs:
   morph:
-    uses: ./actions/wft_test.yml
-    with:
-      message: "Is this real?"
-  job1:
+   runs-on: ubuntu-latest
+   steps:
+      - uses: ./actions/wf_test.yml
+        with:
+           message: "Is this real?"
+  job2:
     name: run it
     needs: morph
     runs-on: ubuntu-latest
