@@ -12,7 +12,7 @@ jobs:
         ls -la .github/workflows
         ls -la .github/workflows/actions
             
-     - uses: .github/workflows/actions/wf_test.yml@main
+     - uses: ./actions/wf_test.yml
        with:
            message: "Is this real?"
   job2:
@@ -21,5 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: s1
-        uses: .github/workflows/actions/wf_test.yml@main
+        uses: ./actions/wf_test.yml
       - run: echo ${{ needs.morph.outputs.reply }}
